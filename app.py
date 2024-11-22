@@ -9,9 +9,6 @@ def function(calc):
                 'семьдесят', 'восемьдесят', 'девяносто']
     list_hundred = ['сто', 'двести', 'триста', 'четыреста', 'пятьсот',
                     'шестьсот', 'семьсот', 'восемьсот', 'девятьсот']
-    list_thousand = ['тысяча', 'две тысячи', 'три тысячи', 'четыре тысячи',
-                     'пять тысяч', 'шесть тысяч', 'семь тысяч', 'восемь тысяч',
-                     'девять тысяч']
     list_num = [] 
 
     for ten in list_ten:
@@ -27,14 +24,6 @@ def function(calc):
                 list_letter.append(hundred + ' ' + ten) #если ten пустая строка то добавляем комбинацию сотни и десятки
             else:
                 list_letter.append(hundred + ten)
-
-    for thousand in list_thousand:
-        for hundred in [''] + list_letter[1:1000]: 
-            if hundred != '':
-                list_letter.append(thousand + ' ' + hundred) #цикл для сотен добавля пустую строку
-            else:
-                list_letter.append(thousand + hundred)
-
     for num in range(0, 10000): #заполнение списка чисел
         list_num.append(num)
 
