@@ -21,10 +21,8 @@ class SeaBattle:
             if reveal:
                 print(row_label, " ".join(self.field[i]))  # Показываем все поля, если reveal=True
             else:
-                if  row_label < 10: # так как 10 и остальные числа отличаются по длине, то к числам меньшим 10 припишем пустую строку чтоб поле ровным было
-                    print(row_label, ' ' + " ".join(['.' if cell == 'S' else cell for cell in self.field[i]]))  # Скрываем корабли
+                print(row_label, " ".join(['.' if cell == 'S' else cell for cell in self.field[i]]))# Скрываем корабли
                 else:
-                    print(row_label, " ".join(['.' if cell == 'S' else cell for cell in self.field[i]]))
 
 
     def place_ships(self):#Метод place_ships отвечает за размещение кораблей на поле.
